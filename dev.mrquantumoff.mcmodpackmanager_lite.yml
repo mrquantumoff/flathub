@@ -32,6 +32,7 @@ modules:
         sha256: 9f37ad3d33e6da7d565ee932730d7fc04d5f9d4d68db96cada711ba91611cd8e
       - type: git
         url: https://github.com/mrquantumoff/mcmodpackmanager_lite.git
+        branch: main
       - type: file
         path: build.sh
 
