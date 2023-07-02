@@ -16,7 +16,7 @@ finish-args:
   - --filesystem=~/.minecraft
 
 modules:
-  - name: Minecraft Modpack Manager Lite
+  - name: MinecraftModpackManagerLite
     buildsystem: simple
     build-commands:
       - ./build.sh
