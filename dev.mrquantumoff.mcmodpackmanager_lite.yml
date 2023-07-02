@@ -6,7 +6,7 @@ sdk: org.kde.Sdk
 command: mcmodpackmanager_lite
 
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.rust-stable//22.08
+  - org.freedesktop.Sdk.Extension.rust-stable/x86_64/22.08
 
 finish-args:
   - --share=ipc
