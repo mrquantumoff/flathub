@@ -1,0 +1,36 @@
+# Flatpak Manifest
+app-id: dev.mrquantumoff.mcmodpackmanager_reborn
+runtime: org.kde.Platform
+runtime-version: '5.15-22.08'
+sdk: org.kde.Sdk
+command: mcmodpackmanager_lite
+
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
+
+finish-args:
+  - --share=ipc
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --device=dri
+  - --filesystem=~/.minecraft
+
+modules:
+  - name: Minecraft Modpack Manager Lite
+    buildsystem: simple
+    build-commands:
+      - ./build.sh
+    sources:
+      - type: file
+        url: https://github.com/mrquantumoff/mcmodpackmanager_lite/raw/main/dev.mrquantumoff.mcmodpackmanager_lite.metainfo.xml
+      - type: file
+        url: https://github.com/mrquantumoff/mcmodpackmanager_lite/raw/main/ui/images/logo.svg
+        sha256: 99908293941557619ba1781ea5d9e51607f2e13a32b826f993775c686b7ee31f
+      - type: file
+        url: https://github.com/mrquantumoff/mcmodpackmanager_lite/raw/main/ui/images/logo.png
+        sha256: 9f37ad3d33e6da7d565ee932730d7fc04d5f9d4d68db96cada711ba91611cd8e
+      - type: git
+        url: https://github.com/mrquantumoff/mcmodpackmanager_lite.git
+      - type: file
+        path: build.sh
+
